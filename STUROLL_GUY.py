@@ -1,4 +1,5 @@
 import discord
+import os
 client = discord.Client()
 
 @client.event
@@ -61,6 +62,7 @@ async def on_message(message):
         await message.channel.send('98년도 틀딱겜 기반으로한 봇이 지랄하네')
     if message.content == '병신같은 봇이 지랄하네 ㅋ':
         await message.channel.send('진짜 뒤질라고')
-client.run('ODc4NTY5MTI5NDY3MDY4NDU2.YSDFQw.yJ5oiSVjBHIUDv__kZ5IgzRsg5c')
+access_token = os.environ["BOT_TOKEN"]
+client.run('access_token')
 
 
